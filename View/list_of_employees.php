@@ -1,7 +1,17 @@
  <?php
 	$employees = $Employee->all();
 ?>  
-
+<!-- ============================================================== -->
+<!-- Bread crumb and right sidebar toggle -->
+<!-- ============================================================== -->
+<div class="row page-titles">
+    <div class="align-self-center">
+        <h3 class="text-themecolor">Employees</h3>
+    </div>
+</div>
+<!-- ============================================================== -->
+<!-- End Bread crumb and right sidebar toggle -->
+<!-- ============================================================== -->
 <div class="row">
     <!-- column -->
     <div class="col-lg-12">
@@ -30,8 +40,15 @@
 			                                <td><?php echo $employee['position'];?></td>
 			                                <td><?php echo $employee['address'];?></td>
 			                                <td>
-			                                	<a  href="<?php echo "index.php?action=edit&id={$employee['id']}"; ?>"  class="btn btn-success"><span class="mdi mdi-lead-pencil"></span></a>
-			                                	<a style="color:white;" class="btn btn-danger"><span class="mdi mdi-delete"></span></a>
+                                                <a  href="<?php echo "index.php?action=view&id={$employee['id']}"; ?>"  class="btn btn-success">
+                                                    <span class="mdi mdi-account"></span>
+                                                </a>
+			                                	<a href="<?php echo "index.php?action=edit&id={$employee['id']}"; ?>"  class="btn btn-success">
+                                                    <span class="mdi mdi-lead-pencil"></span>
+                                                </a>
+			                                	<a style="color:white;" class="btn btn-danger">
+                                                    <span class="mdi mdi-delete"></span>
+                                                </a>
 			                                </td>
 			                            </tr>
 			                        <?php endwhile;

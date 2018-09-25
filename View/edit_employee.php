@@ -1,23 +1,42 @@
 <?php 
 	$id = isset($_GET['id']) ? $_GET['id'] : null ; 
-
+	$from = isset($_GET['from']) ? $_GET['from'] : null ; 
 
 	if ($id) {
-	    $employee = $Employee->get($id);
 	    //validation
 	    if (isset($_POST['is_submitted'])) {
 	    	if($_GET['id'] === $_POST['id']){
-	    		print_r($_POST);
 	    		$Employee->update($_POST);
+	    		$employee = $Employee->get($id);
 	    	}
 	        else{
-	        	echo "Invalid";
+	        	echo "Invalid Employee...";
 	        }
 	    }
+	     $employee = $Employee->get($id);
 	} else {
 	    header('Location: index.php');
 	}
 ;?>
+
+<!-- ============================================================== -->
+<!-- Bread crumb and right sidebar toggle -->
+<!-- ============================================================== -->
+<div class="row page-titles">
+    <div class="align-self-center">
+        <h3 class="text-themecolor">Edit Employee</h3>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.php">List of Employees</a></li>
+            <?php if($from == "view"):?>
+				<li class="breadcrumb-item"><a href="<?php echo "index.php?action=view&id={$employee['id']}"; ?>">View</a></li>
+            <?php endif;?>
+            <li class="breadcrumb-item active">Edit</li>
+        </ol>
+    </div>
+</div>
+<!-- ============================================================== -->
+<!-- End Bread crumb and right sidebar toggle -->
+<!-- ============================================================== -->
 
 <div class="row">
     <!-- Column -->
