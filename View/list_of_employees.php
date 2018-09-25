@@ -46,7 +46,7 @@
 			                                	<a href="<?php echo "index.php?action=edit&id={$employee['id']}"; ?>"  class="btn btn-success">
                                                     <span class="mdi mdi-lead-pencil"></span>
                                                 </a>
-			                                	<a style="color:white;" class="btn btn-danger">
+			                                	<a onClick="javascript: return confirm('Are you sure?');" href="<?php echo "index.php?action=delete&id={$employee['id']}"; ?>" style="color:white;" class="btn btn-danger">
                                                     <span class="mdi mdi-delete"></span>
                                                 </a>
 			                                </td>

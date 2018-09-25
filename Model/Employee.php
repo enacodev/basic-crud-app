@@ -58,6 +58,22 @@
                 unset($parameters['is_submitted']); 
             }  
         }
+
+        public function delete($id){
+           if(isset($id)){
+                $id= mysqli_real_escape_string($this->database_connection,trim($id));
+
+                $query="DELETE 
+                        FROM `employees` 
+                        WHERE `id` =$id";
+                        
+                $employee = $this->database_connection->query($query); 
+            
+                if($employee){
+                   return true;
+                }
+            }
+        }
         
     }
 ?>

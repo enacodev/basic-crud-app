@@ -99,13 +99,22 @@
                         include './View/list_of_employees.php'; //default page
                     }
                     if( $action == "view"){
-                        include './View/view_employee.php'; //default page
+                        include './View/view_employee.php';
                     }
                     if( $action == "edit"){
-                        include './View/edit_employee.php'; //default page
+                        include './View/edit_employee.php'; 
                     }
-                    
-
+                    if( $action == "delete"){
+                        include './View/delete_employee.php'; 
+                        $from = isset($_GET['from']) ? $_GET['from'] : null ; 
+                        
+                        if($from == "view"){
+                            include './View/view_employee.php';
+                        }
+                        else{
+                            include './View/list_of_employees.php'; //default page
+                        }
+                    }
                     
                 ?> 
                 <!-- ============================================================== -->
