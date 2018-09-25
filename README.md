@@ -1,6 +1,6 @@
 ## Basic CRUD Website
 
-- list of employees and 
+- can view list of employees  
 - can add, edit, view and delete employees
 - search employees
 
