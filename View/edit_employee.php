@@ -3,11 +3,12 @@
 
 
 	if ($id) {
-	    $employee = $Employee->get_employee($id);
+	    $employee = $Employee->get($id);
 	    //validation
-	    if (isset($_POST['update'])) {
+	    if (isset($_POST['is_submitted'])) {
 	    	if($_GET['id'] === $_POST['id']){
-	    		$employee->update($_POST);
+	    		print_r($_POST);
+	    		$Employee->update($_POST);
 	    	}
 	        else{
 	        	echo "Invalid";
@@ -45,32 +46,32 @@
                          <input type="hidden" name="id" value="<?php echo $employee['id'];?>">
                     </div>
                     <div class="form-group">
-                        <label class="col-md-12">First Name</label>
+                        <label for="firstname"  class="col-md-12">First Name</label>
                         <div class="col-md-12">
-                            <input type="text" value="<?php echo $employee["firstname"];?>" placeholder="Jane" class="form-control form-control-line">
+                            <input name="firstname" type="text" value="<?php echo $employee["firstname"];?>" placeholder="Jane" class="form-control form-control-line">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-md-12">Last Name</label>
+                        <label for="lastname"  class="col-md-12">Last Name</label>
                         <div class="col-md-12">
-                            <input type="text" value="<?php echo $employee["lastname"];?>" placeholder="Doe" class="form-control form-control-line">
+                            <input name="lastname" type="text" value="<?php echo $employee["lastname"];?>" placeholder="Doe" class="form-control form-control-line">
                         </div>
                     </div>
                     <div class="form-group">
-                       <label class="col-md-12">Position</label>
+                        <label for="position"  class="col-md-12">Position</label>
                         <div class="col-md-12">
-                            <input type="text" value="<?php echo $employee["position"];?>" placeholder="Web Developer" class="form-control form-control-line">
+                            <input name="position" type="text" value="<?php echo $employee["position"];?>" placeholder="Web Developer" class="form-control form-control-line">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-md-12">Address</label>
-                        <div class="col-md-12">
-                            <input type="text" value="<?php echo $employee["firstname"];?>" placeholder="Bacolod" class="form-control form-control-line">
+                        <label for="address" class="col-md-12">Address</label>
+                        <div name="address" class="col-md-12">
+                            <input name="address" type="text" value="<?php echo $employee["address"];?>" placeholder="Bacolod" class="form-control form-control-line">
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-sm-12">
-                            <input name="update" type="submit" class="btn btn-success" value="Update"/>
+                            <input name="is_submitted" type="submit" class="btn btn-success" value="Update"/>
                         </div>
                     </div>
                 </form>
