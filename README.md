@@ -13,7 +13,7 @@
 ## Assets Folder
 - contains all the assets used by the Bootstrap theme
 
-## Database FOlder
+## Database Folder
 - contains the sql dump
 
 Used Bootstrap 4 template: https://wrappixel.com/demos/free-admin-templates/material-pro-lite/lite/
