@@ -6,7 +6,13 @@
 <!-- ============================================================== -->
 <div class="row page-titles">
     <div class="align-self-center">
-        <h3 class="text-themecolor">Employees</h3>
+        <h3 class="text-themecolor">Employees </h3>
+        <span> 
+            <a href="<?php echo "index.php?action=add"; ?>"  class="btn btn-success">
+                <span class="mdi mdi-account-plus"></span>
+                Add
+            </a>
+        </span>
     </div>
 </div>
 <!-- ============================================================== -->

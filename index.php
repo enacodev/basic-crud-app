@@ -1,6 +1,6 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -114,6 +114,9 @@
                         else{
                             include './View/list_of_employees.php'; //default page
                         }
+                    }
+                    if( $action == "add"){
+                        include './View/add_employee.php'; 
                     }
                     
                 ?> 

@@ -15,7 +15,7 @@
 	    }
 	     $employee = $Employee->get($id);
 	} else {
-	    header('Location: index.php');
+	    header('Location: index.php?action=default');
 	}
 ;?>
 
@@ -67,25 +67,25 @@
                     <div class="form-group">
                         <label for="firstname"  class="col-md-12">First Name</label>
                         <div class="col-md-12">
-                            <input name="firstname" type="text" value="<?php echo $employee["firstname"];?>" placeholder="Jane" class="form-control form-control-line">
+                            <input name="firstname" type="text" value="<?php echo $employee["firstname"];?>" placeholder="e.g. Jane" class="form-control form-control-line">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="lastname"  class="col-md-12">Last Name</label>
                         <div class="col-md-12">
-                            <input name="lastname" type="text" value="<?php echo $employee["lastname"];?>" placeholder="Doe" class="form-control form-control-line">
+                            <input name="lastname" type="text" value="<?php echo $employee["lastname"];?>" placeholder="e.g. Doe" class="form-control form-control-line">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="position"  class="col-md-12">Position</label>
                         <div class="col-md-12">
-                            <input name="position" type="text" value="<?php echo $employee["position"];?>" placeholder="Web Developer" class="form-control form-control-line">
+                            <input name="position" type="text" value="<?php echo $employee["position"];?>" placeholder="e.g. Web Developer" class="form-control form-control-line">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="address" class="col-md-12">Address</label>
                         <div name="address" class="col-md-12">
-                            <input name="address" type="text" value="<?php echo $employee["address"];?>" placeholder="Bacolod" class="form-control form-control-line">
+                            <input name="address" type="text" value="<?php echo $employee["address"];?>" placeholder="e.g. Bacolod" class="form-control form-control-line">
                         </div>
                     </div>
                     <div class="form-group">

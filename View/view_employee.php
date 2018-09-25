@@ -3,7 +3,7 @@
 	if ($id) {
 	    $employee = $Employee->get($id);
 	} else {
-	    header('Location: index.php');
+	    header('Location: index.php?action=default');
 	}
 ;?>
 

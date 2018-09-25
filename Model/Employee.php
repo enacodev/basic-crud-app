@@ -66,13 +66,33 @@
                 $query="DELETE 
                         FROM `employees` 
                         WHERE `id` =$id";
-                        
+
                 $employee = $this->database_connection->query($query); 
             
                 if($employee){
                    return true;
                 }
             }
+        }
+
+         public function add($parameters){
+            $is_submitted = isset($parameters["is_submitted"]) ? $parameters["is_submitted"] : false;
+            if($is_submitted){
+                $firstname = mysqli_real_escape_string($this->database_connection,trim($parameters["firstname"]));
+                $lastname = mysqli_real_escape_string($this->database_connection,trim($parameters["lastname"]));
+                $position = mysqli_real_escape_string($this->database_connection,trim($parameters["position"]));
+                $address=  mysqli_real_escape_string($this->database_connection,trim($parameters["address"]));
+
+                $query="INSERT INTO `employees` (`firstname`, `lastname`, `position`, `address`) 
+                        VALUES ('$firstname', '$lastname', '$position', '$address')";
+                        
+                $employee = $this->database_connection->query($query); 
+                unset($parameters['is_submitted']); 
+            }                
+        }
+
+        function __destruct() {
+            mysqli_close($this->database_connection);  
         }
         
     }
