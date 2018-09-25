@@ -5,10 +5,10 @@
 - search employees
 
 ## View Folder
--contains all the pages for the CRUD
+- contains all the pages for the CRUD
 
 ## Model Folder
--contains the Employee class that handles all the database config and calls
+- contains the Employee class that handles all the database config and calls
 
 ## Assets Folder
 - contains all the assets used by the Bootstrap theme
