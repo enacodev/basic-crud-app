@@ -62,30 +62,30 @@
             <div class="card-block">
                 <form class="form-horizontal form-material" method="post" action="">
                 	<div class="form-group hide">
-                         <input type="hidden" name="id" value="<?php echo $employee['id'];?>">
+                         <input type="hidden" name="id" value="<?php echo $employee['id'];?>" required>
                     </div>
                     <div class="form-group">
                         <label for="firstname"  class="col-md-12">First Name</label>
                         <div class="col-md-12">
-                            <input name="firstname" type="text" value="<?php echo $employee["firstname"];?>" placeholder="e.g. Jane" class="form-control form-control-line">
+                            <input name="firstname" type="text" value="<?php echo $employee["firstname"];?>" placeholder="e.g. Jane" class="form-control form-control-line" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="lastname"  class="col-md-12">Last Name</label>
                         <div class="col-md-12">
-                            <input name="lastname" type="text" value="<?php echo $employee["lastname"];?>" placeholder="e.g. Doe" class="form-control form-control-line">
+                            <input name="lastname" type="text" value="<?php echo $employee["lastname"];?>" placeholder="e.g. Doe" class="form-control form-control-line" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="position"  class="col-md-12">Position</label>
                         <div class="col-md-12">
-                            <input name="position" type="text" value="<?php echo $employee["position"];?>" placeholder="e.g. Web Developer" class="form-control form-control-line">
+                            <input name="position" type="text" value="<?php echo $employee["position"];?>" placeholder="e.g. Web Developer" class="form-control form-control-line" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="address" class="col-md-12">Address</label>
                         <div name="address" class="col-md-12">
-                            <input name="address" type="text" value="<?php echo $employee["address"];?>" placeholder="e.g. Bacolod" class="form-control form-control-line">
+                            <input name="address" type="text" value="<?php echo $employee["address"];?>" placeholder="e.g. Bacolod" class="form-control form-control-line" required>
                         </div>
                     </div>
                     <div class="form-group">

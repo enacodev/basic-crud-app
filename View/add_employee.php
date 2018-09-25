@@ -38,25 +38,25 @@
                     <div class="form-group">
                         <label for="firstname"  class="col-md-12">First Name</label>
                         <div class="col-md-12">
-                            <input name="firstname" type="text" value="" placeholder="e.g. Jane" class="form-control form-control-line">
+                            <input name="firstname" type="text" value="" placeholder="e.g. Jane" class="form-control form-control-line" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="lastname"  class="col-md-12">Last Name</label>
                         <div class="col-md-12">
-                            <input name="lastname" type="text" value="" placeholder="e.g. Doe" class="form-control form-control-line">
+                            <input name="lastname" type="text" value="" placeholder="e.g. Doe" class="form-control form-control-line" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="position"  class="col-md-12">Position</label>
                         <div class="col-md-12">
-                            <input name="position" type="text" value="" placeholder="e.g. Web Developer" class="form-control form-control-line">
+                            <input name="position" type="text" value="" placeholder="e.g. Web Developer" class="form-control form-control-line" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="address" class="col-md-12">Address</label>
                         <div name="address" class="col-md-12">
-                            <input name="address" type="text" value="" placeholder="e.g. Bacolod" class="form-control form-control-line">
+                            <input name="address" type="text" value="" placeholder="e.g. Bacolod" class="form-control form-control-line" required>
                         </div>
                     </div>
                     <div class="form-group">

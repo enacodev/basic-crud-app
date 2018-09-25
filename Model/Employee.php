@@ -59,6 +59,7 @@
             }  
         }
 
+        //delete employee
         public function delete($id){
            if(isset($id)){
                 $id= mysqli_real_escape_string($this->database_connection,trim($id));
@@ -75,7 +76,8 @@
             }
         }
 
-         public function add($parameters){
+        //add employee
+        public function add($parameters){
             $is_submitted = isset($parameters["is_submitted"]) ? $parameters["is_submitted"] : false;
             if($is_submitted){
                 $firstname = mysqli_real_escape_string($this->database_connection,trim($parameters["firstname"]));
@@ -95,7 +97,7 @@
             mysqli_close($this->database_connection);  
         }
 
-        //get all employees
+        //search employee
         public function search($keyword){
             $keyword = mysqli_real_escape_string($this->database_connection,trim($keyword));
             $query = "SELECT * 
