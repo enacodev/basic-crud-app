@@ -1,3 +1,7 @@
+<?php
+    include './Model/Employee.php';
+    $Employee = new Employee();
+;?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -65,8 +69,10 @@
                         <!-- Search -->
                         <!-- ============================================================== -->
                         <li class="nav-item hidden-sm-down search-box"> <a class="nav-link hidden-sm-down text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="ti-search"></i> Search Employee</a>
-                            <form class="app-search">
-                                <input type="text" class="form-control" placeholder="Search & enter"> <a class="srh-btn"><i class="ti-close"></i></a> </form>
+                            <form action="index.php?action=search" class="app-search" method="POST">
+                                <input name="search" type="text" class="form-control" placeholder="Search & enter"> 
+                                    <a class="srh-btn"><i class="ti-close"></i></a>
+                            </form>
                         </li>
                     </ul>
                 </div>
@@ -88,11 +94,7 @@
                 <!-- ============================================================== -->
                 <!-- Row -->
 
-                <?php 
-
-                    include './Model/Employee.php';
-                    $Employee = new Employee();
-                    
+                <?php                     
                     $action = isset($_GET["action"]) ? $_GET["action"] : "default" ;
 
                     if( $action == "default"){
@@ -117,6 +119,9 @@
                     }
                     if( $action == "add"){
                         include './View/add_employee.php'; 
+                    }
+                    if( $action == "search"){
+                      include './View/search_employee.php'; 
                     }
                     
                 ?> 

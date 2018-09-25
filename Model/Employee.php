@@ -94,6 +94,22 @@
         function __destruct() {
             mysqli_close($this->database_connection);  
         }
+
+        //get all employees
+        public function search($keyword){
+            $keyword = mysqli_real_escape_string($this->database_connection,trim($keyword));
+            $query = "SELECT * 
+                      FROM `employees`
+                      WHERE `firstname`
+                      LIKE '%".$keyword."%'
+                      OR lastname like '%".$keyword."%' 
+                      OR address like '%".$keyword."%' 
+                      OR position like '%".$keyword."%' 
+                      ";
+            $employees =  $this->database_connection->query($query);
+            return $employees;  
+        }
+
         
     }
 ?>
